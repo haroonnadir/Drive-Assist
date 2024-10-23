@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Sign-up</title>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <nav class="nav-bar">
+          <ul class="navbar">
+            <li><a href="/">Home</a></li>
+            <li><a href="./signup.html">SignUp</a></li>
+            <li><a href="./sign-in.html">SignIn</a></li>
+            <li><a href="./about.html">About Us</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <div class="logo">
+          <img src="./imgs/drive-logo.png" alt="Logo" />
+        </div>
+        <div class="container">
+          <h2>Signup</h2>
+          <form
+            action="./about.html"
+            method="post"
+            onsubmit="return validateForm()"
+          >
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Enter your name"
+                id="name"
+                name="name"
+                required
+              />
+              <span class="error" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                placeholder="Enter email"
+                id="email"
+                name="email"
+                required
+              />
+              <span class="error" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                placeholder="Enter valid password"
+                id="password"
+                name="password"
+                required
+              />
+              <span class="error" id="password-error"></span>
+            </div>
+            <div class="form-group">
+              <input
+                type="tel"
+                placeholder="Enter your phone number"
+                id="phone"
+                name="phone"
+                required
+              />
+              <span class="error" id="phone-error"></span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="text"
+                placeholder="Enter your Address"
+                id="address"
+                name="address"
+              />
+            </div>
+
+            <div class="form-group">
+              <select id="city" name="city" required>
+                <option value="">Select City</option>
+                <option value="lahore">Lahore</option>
+                <option value="skp">Sheikhupura</option>
+                <option value="islamabad">Islamabad</option>
+                <option value="fsd">Faisalabad</option>
+                <option value="multan">Multan</option>
+                <option value="karachi">Karachi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <input
+                type="date"
+                placeholder="Select date"
+                id="date"
+                name="date"
+                required
+              />
+              <span class="error" id="date-error"></span>
+            </div>
+            <div class="form-group">
+              <div class="radio-group">
+                <label class="gen-label">Gender:</label>
+                <input
+                  type="radio"
+                  id="male"
+                  name="gender"
+                  value="male"
+                  required
+                />
+                <label for="male">Male</label>
+                <input
+                  type="radio"
+                  id="female"
+                  name="gender"
+                  value="female"
+                  required
+                />
+                <label for="female">Female</label>
+              </div>
+              <span class="error" id="gender-error"></span>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit">Submit</button>
+              <button type="reset">Clear</button>
+            </div>
+          </form>
+        </div>
+      </main>
+
+      <script src="./js/signup.js"></script>
+    </div>
+  </body>
+</html>
